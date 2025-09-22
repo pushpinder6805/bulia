@@ -8,7 +8,7 @@ export default {
       api.onPageChange(() => {
         const input = document.querySelector("#custom-search-input.search-term__input");
         if (input) {
-          input.setAttribute("placeholder", "this is test");
+          input.setAttribute("placeholder", "Search for solutions, answers and community topics");
         }
       });
     });
