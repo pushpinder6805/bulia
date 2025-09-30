@@ -1,7 +1,7 @@
 import { apiInitializer } from "discourse/lib/api";
 
 export default apiInitializer("1.8.0", (api) => {
-  api.decorateWidget("below-site-header:after", (helper) => {
+  api.decorateWidget("above-discovery-categories:after", (helper) => {
     return helper.h("div#top-contributors-container");
   });
 
