@@ -1,0 +1,12 @@
+<div class="sidebar-contributors">
+  <h3>Monthly Top Contributors</h3>
+
+  {{#each this.contributors as |user|}}
+    <TopContributor @data={{user}} />
+  {{/each}}
+
+  <div class="contributors-see-more">
+    <a href="/u?order={{settings.order_by}}&period=monthly">See all →</a>
+  </div>
+</div>
+
