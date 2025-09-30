@@ -11,14 +11,14 @@ export default apiInitializer("1.8.0", (api) => {
 
       try {
         let data = await ajax("/directory_items.json", {
-          data: { period: "monthly", order: "post_count", limit: 5 },
+          data: { period: "monthly", order: "post_count", limit: 10 },
         });
 
         let items = (data.directory_items || []).filter((i) => i.post_count > 0);
 
         if (items.length === 0) {
           data = await ajax("/directory_items.json", {
-            data: { period: "all", order: "post_count", limit: 5 },
+            data: { period: "all", order: "post_count", limit: 10 },
           });
           items = (data.directory_items || []).filter((i) => i.post_count > 0);
         }
