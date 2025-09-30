@@ -32,12 +32,12 @@
     }
 
 html .background-container {
-    background: #fdf1f5 !important;
+    background: #242d5d !important;
     clip-path: none !important;
 }
 .navigation-categories #main-outlet-wrapper #main-outlet {
     grid-column: 1 / 3;
-    background: #fdf1f5;
+    background: #242d5d;
     box-shadow: none !important;
     border-radius: 0px !important;
 }
@@ -79,7 +79,7 @@ html .background-container {
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 20px;
   padding: 20px;
-  background: #fdf1f5; /* light pink like in your screenshot */
+  background: #242d5d; 
 }
 
 .category-card {
@@ -97,7 +97,7 @@ html .background-container {
 
 .category-card .icon {
   font-size: 32px;
-  color: #8000ff; /* purple accent */
+  color: #8000ff;
   margin-bottom: 12px;
 }
 
