@@ -187,3 +187,80 @@ html .background-container {
     margin-top: 1rem;
   }
 }
+//top-contributors//
+.top-contributors-banner {
+  background: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  padding: 1rem;
+  max-width: 350px;
+
+  .contributors-header {
+    font-weight: 600;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+  }
+
+  .contributors-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    .contributor-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0.5rem 0;
+      border-bottom: 1px solid #f0f0f0;
+
+      &:last-child {
+        border-bottom: none;
+      }
+
+      .contributor-avatar {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        margin-right: 0.75rem;
+      }
+
+      .contributor-info {
+        flex: 1;
+
+        .username {
+          font-weight: 600;
+          display: block;
+        }
+        .name {
+          font-size: 0.85rem;
+          color: #666;
+        }
+      }
+
+      .contributor-posts {
+        font-weight: 500;
+        font-size: 0.9rem;
+        white-space: nowrap;
+      }
+    }
+  }
+
+  .see-more {
+    text-align: center;
+    margin-top: 1rem;
+
+    a {
+      display: inline-block;
+      padding: 0.5rem 1rem;
+      border: 1px solid #ccc;
+      border-radius: 24px;
+      text-decoration: none;
+      font-weight: 500;
+      color: #333;
+
+      &:hover {
+        background: #f2f2f2;
+      }
+    }
+  }
+}
