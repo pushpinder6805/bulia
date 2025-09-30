@@ -2,7 +2,7 @@ import { apiInitializer } from "discourse/lib/api";
 import { ajax } from "discourse/lib/ajax";
 
 export default apiInitializer("1.8.0", (api) => {
-  api.modifyClass("controller:discovery", {
+  api.modifyClass("controller:discovery/categories", {
     pluginId: "community-highlight",
     topContributors: null,
 
