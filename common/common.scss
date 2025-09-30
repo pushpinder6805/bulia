@@ -76,11 +76,13 @@ html .background-container {
 //custom-css-component-end//
 //categories//
 .category-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-  gap: 24px;
-  padding: 40px 24px;
-  box-sizing: border-box;
+  margin: 28px 0 35px 0;
+    flex-wrap: wrap;
+    column-gap: 30px;
+    row-gap: 57px;
+    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
 }
 
 .category-card-link {
@@ -90,14 +92,14 @@ html .background-container {
 
 .category-card {
   display: flex;
-  align-items: flex-start;
-  padding: 24px;
-  border: 1px solid #e4e4e7;
-  border-radius: 16px;
-  background-color: #fff;
-  min-height: 140px;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
-  transition: box-shadow 0.2s ease, transform 0.2s ease;
+    height: 100%;
+    padding: 14px 16px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    background: #3f4c93;
+    border: 1px solid white;
+    border-radius: 6px;
 }
 
 .category-card:hover {
