@@ -1,20 +1,21 @@
 <section class="category-grid">
   {{#each categories as |category|}}
-    <a href="{{category.url}}" class="category-link">
+    <a href="{{category.url}}" class="category-card-link">
       <div class="category-card">
-        <div class="icon">
+        <div class="category-card__icon">
           {{#if category.uploaded_logo.url}}
-            <img src="{{category.uploaded_logo.url}}" alt="{{category.name}}" />
-          {{else}}
-            📂
+            <img src="{{category.uploaded_logo.url}}" alt="{{category.name}}">
           {{/if}}
         </div>
-        <h3>{{category.name}}</h3>
-        <p>{{category.description_text}}</p>
+        <div class="category-card__content">
+          <h3 class="category-card__title">{{category.name}}</h3>
+          <p class="category-card__desc">{{category.description_text}}</p>
+        </div>
       </div>
     </a>
   {{/each}}
 </section>
+
 
 
 <section class="ambassador-banner">
