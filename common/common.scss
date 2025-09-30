@@ -102,8 +102,14 @@ html .background-container {
     border-left: 9px solid #45a1d4;
 }
 
+.category-card {
+  transition: box-shadow 0.3s ease;
+}
+
 .category-card:hover {
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  box-shadow:
+    0 6px 20px rgba(0, 0, 0, 0.35),
+    0 0 0 1px rgba(255, 255, 255, 0.08);
 }
 
 .category-icon-wrap {
@@ -114,6 +120,7 @@ html .background-container {
   display: flex;
   align-items: center;
   justify-content: center;
+  display: none;
 }
 
 .category-icon-wrap img {
