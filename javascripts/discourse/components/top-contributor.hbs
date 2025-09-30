@@ -1,6 +1,40 @@
-<div class="contributor-row">
-  {{avatar user imageSize="small"}}
-  <span class="user-name">@{{user.username}}</span>
-  <span class="count">{{this.data.post_count}} posts</span>
+<div class="top-contributors__user">
+  <span data-user-card={{this.user.username}} class="top-contributors__user-badge">
+    <div class="top-contributors__user-image user-image">
+      {{avatar
+        this.user
+        imageSize="small"
+        titlePath="title"
+        avatarTemplatePath="avatar_template"
+        usernamePath="username"
+        namePath="name"
+      }}
+
+      {{#if this.user.flair_url}}
+        <div
+          class="avatar-flair avatar-flair-image"
+          style="background-image: url({{this.user.flair_url}})"
+          title={{this.user.flair_name}}
+        ></div>
+      {{/if}}
+    </div>
+
+    <div class="top-contributors__user-username">
+      {{this.user.username}}
+    </div>
+
+    <div class="top-contributors__user-name">
+      {{this.user.name}}
+    </div>
+  </span>
+
+  <span class="top-contributors__user-posts">
+    <div class="top-contributors__user-posts-count">
+      {{this.data.post_count}}
+    </div>
+    <div class="top-contributors__user-posts-text">
+      Posts
+    </div>
+  </span>
 </div>
 

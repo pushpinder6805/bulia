@@ -1,12 +1,19 @@
-<div class="sidebar-contributors">
-  <h3>Monthly Top Contributors</h3>
+<div class="top-contributors__container">
+  <h3 class="top-contributors__heading">
+    Monthly top contributors
+  </h3>
 
-  {{#each this.contributors as |user|}}
-    <TopContributor @data={{user}} />
-  {{/each}}
+  <div class="top-contributors__body">
+    {{#each this.contributors as |user|}}
+      <TopContributor @data={{user}} />
+    {{/each}}
+  </div>
 
-  <div class="contributors-see-more">
-    <a href="/u?order={{settings.order_by}}&period=monthly">See all →</a>
+  <div class="top-contributors__view-all">
+    <a href="/u?order=post_count&period=monthly">
+      See more
+      {{d-icon "plus"}}
+    </a>
   </div>
 </div>
 

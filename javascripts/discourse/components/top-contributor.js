@@ -6,8 +6,11 @@ import User from "discourse/models/user";
 export default class TopContributor extends Component {
   init() {
     super.init(...arguments);
+
+    // Load full user model by username
     User.findByUsername(this.data.user.username).then((user) => {
       this.set("user", user);
     });
   }
 }
+

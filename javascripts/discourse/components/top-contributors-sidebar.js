@@ -2,13 +2,15 @@ import Component from "@ember/component";
 import { tagName } from "@ember-decorators/component";
 import { withPluginApi } from "discourse/lib/plugin-api";
 
-const fetchDirectoryItems = (settings, component) => {
-  const url = `/directory_items.json?period=monthly&order=${settings.order_by}&exclude_groups=${settings.excluded_group_names}&limit=5`;
-
-  fetch(url)
-    .then((r) => r.json())
+const fetchDirectoryItems = (component) => {
+  fetch("/directory_items.json?period=monthly&order=post_count&limit=10")
+    .then((res) => res.json())
     .then((data) => {
-      component.set("contributors", data.directory_items);
+      let sorted = (data.directory_items || [])
+        .filter((i) => i.post_count > 0)
+        .sort((a, b) => b.post_count - a.post_count);
+
+      component.set("contributors", sorted);
     });
 };
 
@@ -20,7 +22,7 @@ export default class TopContributorsSidebar extends Component {
 
     withPluginApi("0.11", (api) => {
       api.onPageChange(() => {
-        fetchDirectoryItems(settings, this);
+        fetchDirectoryItems(this);
       });
     });
   }
