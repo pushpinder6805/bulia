@@ -98,7 +98,6 @@ html .background-container {
     align-items: center;
     flex-direction: row;
     background: #3f4c93;
-    border: 1px solid white;
     border-radius: 6px;
 }
 
@@ -134,14 +133,14 @@ html .background-container {
 .category-card-title {
   font-size: 1.1rem;
   font-weight: 600;
-  color: #111;
+  color: #fff;
   margin: 0 0 6px 0;
   line-height: 1.3;
 }
 
 .category-card-description {
   font-size: 0.95rem;
-  color: #666;
+  color: #fff;
   margin: 0;
   line-height: 1.4;
 }
