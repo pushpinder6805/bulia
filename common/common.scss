@@ -75,66 +75,7 @@ html .background-container {
 
 //custom-css-component-end//
 //categories//
-.category-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap: 1.5rem;
-  margin: 2rem 0;
-}
 
-.category-card-link {
-  text-decoration: none;
-  color: inherit;
-}
-
-.category-card {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  padding: 1.25rem;
-  border: 1px solid #e5e5e5;
-  border-radius: 12px;
-  background: #fff;
-  transition: box-shadow 0.2s ease, border-color 0.2s ease;
-  height: 100%;
-}
-
-.category-card:hover {
-  border-color: #d0d0d0;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-}
-
-.category-card__icon {
-  flex-shrink: 0;
-  width: 64px;
-  height: 64px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.category-card__icon img {
-  max-width: 100%;
-  max-height: 100%;
-  object-fit: contain;
-}
-
-.category-card__content {
-  flex: 1;
-}
-
-.category-card__title {
-  font-size: 1.1rem;
-  font-weight: 600;
-  margin: 0 0 0.25rem;
-}
-
-.category-card__desc {
-  margin: 0;
-  font-size: 0.9rem;
-  color: #555;
-  line-height: 1.4;
-}
 
 
 //banner //
