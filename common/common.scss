@@ -371,3 +371,72 @@ html .background-container {
   }
 }
 
+//support-section//
+.support-section {
+  width: 100%;
+  background-color: #6b0031;
+  color: #fff;
+  padding: 64px 24px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.support-heading {
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin-bottom: 48px;
+  color: #fff;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+}
+
+.support-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.support-card {
+  background-color: #ffe8ee;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 24px;
+  text-align: left;
+  text-decoration: none;
+  color: #6b0031;
+  transition: box-shadow 0.3s ease;
+}
+
+.support-card:hover {
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+}
+
+.card-content h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin: 0 0 6px;
+}
+
+.card-content p {
+  font-size: 0.95rem;
+  margin: 0;
+}
+
+.card-arrow {
+  background-color: #6b0031;
+  color: #fff;
+  font-size: 1.2rem;
+  width: 36px;
+  height: 36px;
+  border-radius: 999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
