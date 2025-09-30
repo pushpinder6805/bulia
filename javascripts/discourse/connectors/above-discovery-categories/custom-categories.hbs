@@ -4,7 +4,9 @@
       <div class="category-card">
         <div class="category-card__icon">
           {{#if category.uploaded_logo.url}}
-            <img src="{{category.uploaded_logo.url}}" alt="{{category.name}}">
+            <img src="{{category.uploaded_logo.url}}" alt="{{category.name}}" />
+          {{else}}
+            <div class="default-icon">📁</div>
           {{/if}}
         </div>
         <div class="category-card__content">
@@ -15,6 +17,7 @@
     </a>
   {{/each}}
 </section>
+
 
 
 
