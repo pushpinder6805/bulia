@@ -2,7 +2,7 @@ import { apiInitializer } from "discourse/lib/api";
 import { ajax } from "discourse/lib/ajax";
 
 export default apiInitializer("1.8.0", (api) => {
-  api.modifyClass("controller:discovery/categories", {
+  api.modifyClass("controller:discovery", {
     pluginId: "community-highlight",
     topContributors: null,
 
@@ -14,15 +14,22 @@ export default apiInitializer("1.8.0", (api) => {
           data: { period: "monthly", order: "post_count", limit: 10 },
         });
 
-        let items = (data.directory_items || []).filter((i) => i.post_count > 0);
+        console.log("Fetched directory items:", data.directory_items);
+
+        let items = (data.directory_items || []).filter(
+          (i) => i.post_count > 0
+        );
 
         if (items.length === 0) {
           data = await ajax("/directory_items.json", {
             data: { period: "all", order: "post_count", limit: 10 },
           });
-          items = (data.directory_items || []).filter((i) => i.post_count > 0);
+          items = (data.directory_items || []).filter(
+            (i) => i.post_count > 0
+          );
         }
 
+        console.log("Filtered contributors:", items);
         this.set("topContributors", items);
       } catch (e) {
         console.error("Community highlight fetch failed", e);
@@ -31,6 +38,7 @@ export default apiInitializer("1.8.0", (api) => {
 
     onShow() {
       this._super(...arguments);
+      console.log("onShow called from community-highlight");
       this.loadContributors();
     },
   });
