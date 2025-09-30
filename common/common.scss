@@ -189,8 +189,7 @@ html .background-container {
 }
 //top-contributors//
 .community-highlight {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
   gap: 2rem;
   margin: 2rem 0;
 
