@@ -113,3 +113,77 @@ html .background-container {
   line-height: 1.5;
   color: #444;
 }
+
+//banner //
+.ambassador-banner {
+  background: #ffe6ff;
+  border-radius: 12px;
+  padding: 1.5rem;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.banner-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.banner-left img {
+  width: 80px;
+  height: auto;
+}
+
+.banner-middle {
+  flex: 1 1 300px;
+}
+
+.banner-middle h2 {
+  margin: 0 0 0.5rem;
+  font-size: 1.5rem;
+  color: #5a007a;
+}
+
+.banner-middle p {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #4a004f;
+}
+
+.banner-right {
+  flex-shrink: 0;
+}
+
+.join-btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  border-radius: 999px;
+  background: #6a0dad;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  text-align: center;
+}
+
+.join-btn:hover {
+  background: #530b9b;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .banner-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .banner-left img {
+    margin: 0 auto;
+  }
+
+  .banner-right {
+    margin-top: 1rem;
+  }
+}
