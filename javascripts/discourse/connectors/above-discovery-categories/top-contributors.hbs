@@ -1,9 +1,9 @@
 <div class="top-contributors-banner">
   <div class="contributors-header">Monthly top contributors</div>
   <ul class="contributors-list">
-    {{#each this.topUsers as |user|}}
+    {{#each this.topContributors as |user|}}
       <li class="contributor-item">
-        <img class="contributor-avatar" src="{{avatarUrl user.user.avatar_template 64}}" alt="{{user.user.username}}">
+        <img class="contributor-avatar" src="{{avatar-url user.user.avatar_template 64}}" alt="{{user.user.username}}">
         <div class="contributor-info">
           <span class="username">{{user.user.username}}</span>
           <span class="name">{{user.user.name}}</span>
@@ -18,3 +18,4 @@
     <a href="/u?order=post_count&period=monthly">See more +</a>
   </div>
 </div>
+
