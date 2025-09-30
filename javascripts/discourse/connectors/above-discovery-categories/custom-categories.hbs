@@ -1,47 +1,21 @@
 <section class="category-grid">
-  <a href="/c/how-to/" class="category-link">
-  <div class="category-card">
-    <div class="icon">📖</div>
-    <h3>How To</h3>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-  </div>
+  {{#each categories as |category|}}
+    <a href="{{category.url}}" class="category-link">
+      <div class="category-card">
+        <div class="icon">
+          {{#if category.uploaded_logo.url}}
+            <img src="{{category.uploaded_logo.url}}" alt="{{category.name}}" />
+          {{else}}
+            📂
+          {{/if}}
+        </div>
+        <h3>{{category.name}}</h3>
+        <p>{{category.description_text}}</p>
+      </div>
     </a>
-            <a href="/c/directors" class="category-link">
-  <div class="category-card">
-    <div class="icon">🚀</div>
-    <h3>Directors</h3>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-  </div>
-              </a>
-              <a href="/c/rigs" class="category-link">
-  <div class="category-card">
-    <div class="icon">👀</div>
-    <h3>RIGs</h3>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-  </div>
-                </a>
-                <a href="/c/training" class="category-link">
-  <div class="category-card">
-    <div class="icon">🟪</div>
-    <h3>Training</h3>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-  </div>
-                  </a>
-                  <a href="/c/aqf" class="category-link">
-  <div class="category-card">
-    <div class="icon">🧩</div>
-    <h3>AQF</h3>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-  </div>
-                    </a>
-                    <a href="/c/member-info" class="category-link">
-  <div class="category-card">
-    <div class="icon">📑</div>
-    <h3>Members Info</h3>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-  </div>
-                    </a>
+  {{/each}}
 </section>
+
 
 <section class="ambassador-banner">
   <div class="banner-content">
