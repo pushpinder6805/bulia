@@ -2,15 +2,19 @@ import { apiInitializer } from "discourse/lib/api";
 
 export default apiInitializer("1.15.0", (api) => {
   api.onPageChange((url) => {
-    const banner = document.querySelector(".ambassador-banner");
-    if (!banner) return;
+    const homepage = url === "/" || url.startsWith("/latest") || url.startsWith("/categories");
 
-    // Show only on homepage routes
-    if (url === "/" || url.startsWith("/latest") || url.startsWith("/categories")) {
-      banner.style.display = "block";
-    } else {
-      banner.style.display = "none";
-    }
+    const selectors = [
+      ".ambassador-banner",
+      ".community-highlight__wrapper",
+      ".support-section",
+    ];
+
+    selectors.forEach((selector) => {
+      const el = document.querySelector(selector);
+      if (!el) return;
+      el.style.display = homepage ? "block" : "none";
+    });
   });
 });
 
