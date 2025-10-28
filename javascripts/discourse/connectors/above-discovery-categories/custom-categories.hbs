@@ -2,19 +2,23 @@
   {{#each categories as |category|}}
     <a href="{{category.url}}" class="category-card-link">
       <div class="category-card">
-        <div class="category-icon-wrap">
-          {{#if category.uploaded_logo.url}}
-            <img src="{{category.uploaded_logo.url}}" alt="{{category.name}}" />
-          {{/if}}
-        </div>
         <div class="category-card-content">
           <h3 class="category-card-title">{{category.name}}</h3>
           <p class="category-card-description">{{category.description_text}}</p>
+        </div>
+        <div class="category-card-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
+               stroke="currentColor" stroke-width="2" stroke-linecap="round"
+               stroke-linejoin="round" class="feather feather-external-link">
+            <path d="M18 3h3v3M10 14l11-11M21 10V3h-7"/>
+            <path d="M5 5v14h14v-7"/>
+          </svg>
         </div>
       </div>
     </a>
   {{/each}}
 </section>
+
 
 <section class="ambassador-banner">
   <div class="banner-content">
