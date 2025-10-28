@@ -79,10 +79,10 @@ html .background-container {
   margin: 28px 0 35px 0;
     flex-wrap: wrap;
     column-gap: 30px;
-    row-gap: 57px;
+    row-gap: 35px;
     justify-content: center;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
 }
 
 .category-card-link {
